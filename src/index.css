@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* =========================================================================
+       MATERIAL DESIGN 3 EXPRESSIVE - LIGHT SCHEME
+       Seed: Medical Clinical Teal/Cyan (#00677F)
+       ========================================================================= */
+    --md-ref-typeface-brand: "Roboto Flex", Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --md-ref-typeface-plain: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --font-mono: "Roboto Mono", "SF Mono", "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+    /* Primary Accent */
+    --md-sys-color-primary: #00677F;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #B6ECFF;
+    --md-sys-color-on-primary-container: #001F28;
+
+    /* Secondary Accent */
+    --md-sys-color-secondary: #4C626A;
+    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-secondary-container: #CFE6F0;
+    --md-sys-color-on-secondary-container: #071E26;
+
+    /* Tertiary Accent */
+    --md-sys-color-tertiary: #5A5B7E;
+    --md-sys-color-on-tertiary: #FFFFFF;
+    --md-sys-color-tertiary-container: #E0E0FF;
+    --md-sys-color-on-tertiary-container: #161837;
+
+    /* Error */
+    --md-sys-color-error: #BA1A1A;
+    --md-sys-color-on-error: #FFFFFF;
+    --md-sys-color-error-container: #FFDAD6;
+    --md-sys-color-on-error-container: #410002;
+
+    /* Surfaces & Containers (MD3 Tonal Surface Hierarchy) */
+    --md-sys-color-surface: #F5FAFD;
+    --md-sys-color-on-surface: #171C1F;
+    --md-sys-color-on-surface-variant: #40484C;
+    --md-sys-color-surface-variant: #DBE4E8;
+
+    --md-sys-color-surface-container-lowest: #FFFFFF;
+    --md-sys-color-surface-container-low: #EFF5F8;
+    --md-sys-color-surface-container: #E9EFF2;
+    --md-sys-color-surface-container-high: #E3E9EC;
+    --md-sys-color-surface-container-highest: #DDE4E7;
+
+    --md-sys-color-surface-dim: #D6DCDE;
+    --md-sys-color-surface-bright: #F5FAFD;
+
+    --md-sys-color-inverse-surface: #2C3134;
+    --md-sys-color-inverse-on-surface: #EDF1F4;
+    --md-sys-color-inverse-primary: #5BD5F8;
+
+    /* Outlines */
+    --md-sys-color-outline: #70787D;
+    --md-sys-color-outline-variant: #BFC8CC;
+
+    /* Semantic Clinical Accents */
+    --md-clinical-cyan: #00677F;
+    --md-clinical-emerald: #1B6D24;
+    --md-clinical-amber: #875200;
+    --md-clinical-rose: #BA1A1A;
+
+    /* Expressive Shapes */
+    --md-sys-shape-corner-none: 0px;
+    --md-sys-shape-corner-extra-small: 4px;
+    --md-sys-shape-corner-small: 8px;
+    --md-sys-shape-corner-medium: 12px;
+    --md-sys-shape-corner-large: 16px;
+    --md-sys-shape-corner-large-increased: 20px;
+    --md-sys-shape-corner-extra-large: 28px;
+    --md-sys-shape-corner-full: 9999px;
+
+    /* Elevation Shadow Tokens */
+    --md-sys-elevation-level-0: none;
+    --md-sys-elevation-level-1: 0 1px 3px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.12);
+    --md-sys-elevation-level-2: 0 2px 6px 2px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.14);
+    --md-sys-elevation-level-3: 0 4px 8px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.16);
+  }
+
+  .dark {
+    /* =========================================================================
+       MATERIAL DESIGN 3 EXPRESSIVE - DARK SCHEME
+       ========================================================================= */
+    /* Primary Accent */
+    --md-sys-color-primary: #5BD5F8;
+    --md-sys-color-on-primary: #003543;
+    --md-sys-color-primary-container: #004E60;
+    --md-sys-color-on-primary-container: #B6ECFF;
+
+    /* Secondary Accent */
+    --md-sys-color-secondary: #B3CAD4;
+    --md-sys-color-on-secondary: #1E333B;
+    --md-sys-color-secondary-container: #354A52;
+    --md-sys-color-on-secondary-container: #CFE6F0;
+
+    /* Tertiary Accent */
+    --md-sys-color-tertiary: #C2C3EB;
+    --md-sys-color-on-tertiary: #2C2D4D;
+    --md-sys-color-tertiary-container: #424365;
+    --md-sys-color-on-tertiary-container: #E0E0FF;
+
+    /* Error */
+    --md-sys-color-error: #FFB4AB;
+    --md-sys-color-on-error: #690005;
+    --md-sys-color-error-container: #93000A;
+    --md-sys-color-on-error-container: #FFDAD6;
+
+    /* Surfaces & Containers */
+    --md-sys-color-surface: #0F1417;
+    --md-sys-color-on-surface: #DEE3E5;
+    --md-sys-color-on-surface-variant: #BFC8CC;
+    --md-sys-color-surface-variant: #40484C;
+
+    --md-sys-color-surface-container-lowest: #0A0F12;
+    --md-sys-color-surface-container-low: #171D1F;
+    --md-sys-color-surface-container: #1B2123;
+    --md-sys-color-surface-container-high: #252B2E;
+    --md-sys-color-surface-container-highest: #303639;
+
+    --md-sys-color-surface-dim: #0F1417;
+    --md-sys-color-surface-bright: #353B3E;
+
+    --md-sys-color-inverse-surface: #DEE3E5;
+    --md-sys-color-inverse-on-surface: #2C3134;
+    --md-sys-color-inverse-primary: #00677F;
+
+    /* Outlines */
+    --md-sys-color-outline: #8A9296;
+    --md-sys-color-outline-variant: #40484C;
+
+    /* Semantic Clinical Accents */
+    --md-clinical-cyan: #5BD5F8;
+    --md-clinical-emerald: #87D98C;
+    --md-clinical-amber: #FFB86B;
+    --md-clinical-rose: #FFB4AB;
+
+    /* Elevation Shadow Tokens */
+    --md-sys-elevation-level-0: none;
+    --md-sys-elevation-level-1: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+    --md-sys-elevation-level-2: 0 2px 6px 2px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.35);
+    --md-sys-elevation-level-3: 0 4px 8px 3px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--md-ref-typeface-plain);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+}
+
+/* =========================================================================
+   MD3 EXPRESSIVE UTILITIES & CARDS
+   ========================================================================= */
+
+/* MD3 Outlined Card */
+.md3-card-outlined {
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-large-increased);
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.md3-card-outlined:hover {
+  border-color: var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface-container-low);
+}
+
+/* MD3 Elevated Card */
+.md3-card-elevated {
+  background-color: var(--md-sys-color-surface-container-low);
+  box-shadow: var(--md-sys-elevation-level-1);
+  border-radius: var(--md-sys-shape-corner-large-increased);
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.md3-card-elevated:hover {
+  box-shadow: var(--md-sys-elevation-level-2);
+  background-color: var(--md-sys-color-surface-container);
+}
+
+/* MD3 Filled Card */
+.md3-card-filled {
+  background-color: var(--md-sys-color-surface-container-highest);
+  border-radius: var(--md-sys-shape-corner-large-increased);
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* MD3 Navigation Drawer Item (Active Pill) */
+.md3-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--md-sys-shape-corner-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface-variant);
+  transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.md3-nav-item:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+}
+
+.md3-nav-item.active {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  font-weight: 600;
+}
+
+/* MD3 State Layer Ripple Simulation */
+.md3-state-layer {
+  position: relative;
+  overflow: hidden;
+}
+
+.md3-state-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 150ms ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.md3-state-layer:hover::after {
+  opacity: 0.08;
+}
+
+.md3-state-layer:active::after {
+  opacity: 0.12;
+}
+
+/* Medical Tabular Numbers */
+.font-mono-numbers {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* MD3 Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-sys-color-outline);
+}
