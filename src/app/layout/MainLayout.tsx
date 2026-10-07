@@ -2,12 +2,8 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { Sidebar } from './Sidebar'
 import { Header } from './Header'
-import { Toaster } from 'sonner'
-import { useTheme } from '@/app/providers/ThemeProvider'
 
 export const MainLayout: React.FC = () => {
-  const { resolvedTheme } = useTheme()
-
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-[var(--md-sys-color-surface)] text-[var(--md-sys-color-on-surface)] transition-colors duration-200">
       {/* M3 Navigation Drawer */}

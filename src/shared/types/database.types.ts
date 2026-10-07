@@ -634,7 +634,16 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      crear_usuario_clinico: {
+        Args: {
+          new_email: string
+          new_password: string
+          new_nombre: string
+          new_rol: string
+          new_registro_prof?: string
+        }
+        Returns: Json
+      }
     }
     Enums: {
       [_ in never]: never

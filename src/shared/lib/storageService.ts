@@ -164,7 +164,7 @@ export const EquiposService = {
     return equipos.find(e => e.codigo_qr.toLowerCase() === codigoQr.toLowerCase()) || null
   },
 
-  async deleteEquipo(idEquipo: string, motivoBaja?: string): Promise<boolean> {
+  async deleteEquipo(idEquipo: string, _motivoBaja?: string): Promise<boolean> {
     let resolvedUuid = idEquipo
 
     if (isSupabaseConfigured) {
@@ -583,7 +583,7 @@ export const MantenimientoService = {
           updateHv.fecha_proxima_calibracion = proxCalDate.toISOString().split('T')[0]
         }
 
-        await supabase.from('hoja_de_vida').update(updateHv).eq('id_equipo', eqId)
+        await supabase.from('hoja_de_vida').update(updateHv as never).eq('id_equipo', eqId)
 
       } catch (err) {
         console.error('Supabase write error en mantenimientos:', err)

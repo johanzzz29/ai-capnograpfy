@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from '@/app/providers/AuthProvider'
-import { isSupabaseConfigured } from '@/shared/lib/supabase'
 import type { RolUsuario } from '@/shared/types'
 import { Button } from '@/shared/components/ui/Button'
 import { Input } from '@/shared/components/ui/Input'
@@ -15,8 +14,7 @@ import {
   ShieldCheck, 
   ArrowRight, 
   Database, 
-  Activity,
-  Stethoscope
+  Activity
 } from 'lucide-react'
 import { toast } from 'sonner'
 
